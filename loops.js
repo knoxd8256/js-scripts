@@ -21,8 +21,18 @@
 // should function with different array elements
 // In other words, I will modify the elements in this array
 // and your program should still function!
-var presentations = [`Security 101`, `Philanthropy`];
-
+let presentations = [`Security 101`, `Philanthropy`];
+let presNames = Array(presentations.length);
 // YOUR CODE STARTS HERE
-
+function presEnter() {
+    for (pres in presentations) {
+        let names = [];
+        let currPres = presentations[pres];
+        do {
+            let name = window.prompt(`Enter a name for ${currPres}`);
+            names.append(name);
+        }while(name)
+    }
+}
+presEnter();
 // YOUR CODE ENDS HERE

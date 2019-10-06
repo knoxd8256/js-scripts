@@ -5,7 +5,7 @@
 var isLoggedIn = true;
 
 // YOUR CODE STARTS HERE
-!isLoggedIn || console.log('Welcome');
+isLoggedIn && console.log('Welcome');
 // YOUR CODE ENDS HERE
 
 
@@ -20,7 +20,7 @@ var user = {
 }
 
 // YOUR CODE STARTS HERE
-user.age >= 13 || console.log('You must be 13 or older');
+user && user.age >= 13 || console.log('You must be 13 or older');
 // YOUR CODE ENDS HERE
 
 
@@ -38,7 +38,7 @@ var dog = {
 }
 
 // YOUR CODE STARTS HERE
-dogBreed = dog.breed || 'mutt';
+let dogBreed = dog.breed || 'mutt';
 // YOUR CODE ENDS HERE
 
 
