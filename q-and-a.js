@@ -19,13 +19,26 @@
 // In other words, I will modify the elements in these arrays
 // and your program should still function!
 
-var questions = [
+const questions = [
   'What keyword can be used to declare a variable?',
   'Object is a primitive type in javascript. (true/false)',
   'What loop is best for interating over arrays?'
 ];
-var answers = ['var','false','for'];
+const answers = ['var','false','for'];
 
 // YOUR CODE STARTS HERE
-
+let uanswers = Array(questions.length);
+let right = 0;
+for (q in questions) {
+  let answer = window.prompt(questions[q]);
+  uanswers[q] = answer;
+  if (answer == answers[q]) {
+    window.alert("You were right!");
+    right++;
+  }
+  else {
+    window.alert("You were wrong.");
+  }
+}
+window.alert(`You got ${right} right out of ${answers.length}!`)
 // YOUR CODE ENDS HERE

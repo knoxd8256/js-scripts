@@ -22,17 +22,44 @@
 // In other words, I will modify the elements in this array
 // and your program should still function!
 let presentations = [`Security 101`, `Philanthropy`];
-let presNames = Array(presentations.length);
-// YOUR CODE STARTS HERE
-function presEnter() {
-    for (pres in presentations) {
-        let names = [];
-        let currPres = presentations[pres];
-        do {
-            let name = window.prompt(`Enter a name for ${currPres}`);
-            names.append(name);
-        }while(name)
+let presList = document.getElementById('presentations');
+presentationString = '';
+for (let pres in presentations) {
+    if (presentationString) {
+        presentationString += `, ${presentations[pres]}`;
+    }
+    else {
+        presentationString += `${presentations[pres]}`;
     }
 }
-presEnter();
+presList.innerText = presentationString;
+let presNames = Array(presentations.length);
+let viewButton = document.getElementById('viewButton');
+let setButton = document.getElementById('setButton');
+// YOUR CODE STARTS HERE
+function presEnter() {
+    let names;
+    let currPres;
+    let name;
+    for (let pres in presentations) {
+        names = [];
+        currPres = presentations[pres];
+        do {
+            name = window.prompt(`Enter a name for ${currPres}`);
+            name && names.push(name);
+        }while(name);
+        presNames[pres] = names;
+    }
+}
+function presView() {
+    let viewPres = window.prompt('Enter a presentation to view the attendees of.');
+    if (presentations.includes(viewPres)) {
+        window.alert(presNames[presentations.indexOf(viewPres)]);
+    }
+    else {
+        window.alert(`${viewPres} is not a valid presentation.`);
+    }
+}
+viewButton.addEventListener('click', presView);
+setButton.addEventListener('click', presEnter);
 // YOUR CODE ENDS HERE
