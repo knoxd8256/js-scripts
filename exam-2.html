@@ -1,0 +1,63 @@
+<html>
+
+<head>
+  <title>Exam 2</title>
+  <link rel="stylesheet" href="exam-2.css">
+</head>
+
+<body>
+
+  <!-- Hero Image Header-->
+  <header>
+    <figure class="headnugg">
+      <img src="https://embed.widencdn.net/img/beef/es7glannfh/800x600px/taco-beef-nuggets-with-tejano-dipping-sauce-horizontal.eps?keep=c&u=7fueml">
+      <figcaption>Beef Nuggets Review Board</figcaption>
+    </figure>
+  </header>
+
+  <main>
+
+    <!-- Form for leaving a review -->
+    <form id="revForm">
+      <h1> Leave a review!</h1>
+
+      <!-- Name Field -->
+      <label for="name">Name: </label> <br />
+      <input type="text" name="name" id="name" placeholder="Johnny Appleseed" required> <br />
+
+      <!-- Subject Field -->
+      <label for="subject">Subject: </label> <br />
+      <input type="text" name="subject" id="subject" placeholder="Subject Line" required> <br />
+
+      <!-- Comments Field -->
+      <label for="comments">Comments: </label> <br />
+      <textarea name="comments" id="comments" placeholder="This sucks, you suck, and I hate Beef Nuggets." cols="40" rows="5" required></textarea><br />
+
+      <!-- Rating Field Radio Buttons -->
+      <label>Rating: </label> <br />
+        <input type="radio" name="rating" value="1" id="rat1">
+        <label for="rat1" class="ratLabel"> * </label>
+        <input type="radio" name="rating" value="2" id="rat2">
+        <label for="rat2" class="ratLabel"> * </label>
+        <input type="radio" name="rating" value="3" id="rat3">
+        <label for="rat3" class="ratLabel"> * </label>
+        <input type="radio" name="rating" value="4" id="rat4">
+        <label for="rat4" class="ratLabel"> * </label>
+        <input type="radio" name="rating" value="5" id="rat5" checked>
+        <label for="rat5" class="ratLabel"> * </label>
+      <br />
+
+      <!-- Submit Button -->
+      <input type="submit" value="Submit!" id="submit">
+    </form>
+
+    <!-- Section for generated reviews -->
+    <section id="reviews">
+    </section>
+  </main>
+</body>
+
+<!-- Review generation and form handling script, also handles color swapping for star selector.-->
+<script src="exam-2.js"></script>
+
+</html>
