@@ -1,0 +1,25 @@
+<html>
+  <head>
+    <title>Forms</title>
+    <link rel="stylesheet" href="forms-activity.css">
+    <link href="https://fonts.googleapis.com/css?family=Arvo&display=swap" rel="stylesheet"> 
+  </head>
+  <body>
+    <h2>Make a Form!</h2>
+    <form name="formbo" id="formbo">
+      <label for="formName">Form Name:</label>
+      <input type="text" name="formName" id="formName" maxlength="15" required>
+      <label for="formName">Your Name (no numbers):</label>
+      <input type="text" name="authName" id="authName" maxlength="15" pattern="[a-zA-Z]+" required>
+      <label for="buttonNum">Number of Buttons:</label>
+      <input type="number" name="buttonNum" id="buttonNum" min="1" max="12" step="1" required>
+      <label for="colorPick">Button Color:</label>
+      <input type="color" name="colorPick" id="colorPick" value="#3440BB">
+      <label for="rotation">Form Rotation:</label>
+      <input type="range" name="rotation" id="rotation" min="-20" max="20" step="5">
+      <input type="submit" value="Submit">
+      <input type="reset" value="Reset">
+    </form>
+    <script type='text/javascript' src='forms-activity.js'></script>
+  </body>
+</html>
