@@ -1,0 +1,74 @@
+form {
+    justify-self: center;
+    width: 30rem;
+    display: grid;
+    grid-template: repeat(4, 1fr) / repeat(2, 1fr);
+    gap: 1em;
+    z-index: 999;
+}
+
+h2 {
+    margin: 1em 10%;
+    border-bottom: .2em #DDD solid;
+}
+
+body {
+    font-family: 'Arvo', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    display: grid;
+}
+
+[type="color"] {
+    width: 100%;
+    padding: 0;
+    border: none;
+}
+
+[type='submit'], [type='reset'] {
+    color: #FFF;
+    border: none;
+    line-height: 2em;
+    border-radius: .5em;
+    font-weight: 600;
+    transition: background-color .2s ease-out;
+}
+
+[type='submit'] {
+    background-color: #0d2;
+}
+
+[type='submit']:hover, [type='submit']:active, [type='submit']:focus {
+    background-color: #0A0;
+}
+[type='reset'] {
+    background-color: #d34;
+}
+
+[type='reset']:hover, [type='reset']:active, [type='reset']:focus {
+    background-color: #A00;
+}
+
+.subForm {
+    z-index: 0;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: unset;
+    background-color: #FFFFFF;
+    padding: 1em;
+    border: solid #DDD .5em;
+    border-bottom-width: 1em;
+    box-shadow: darkgrey .6em .8em .4em;
+}
+
+.subform button {
+    height: 2em;
+    background-color: navy;
+    border-radius: 1em;
+    border: 2px white solid;
+    box-shadow: darkgrey .2em .4em .4em;
+}
+
+.subform h3 {
+    grid-column: span 3;
+    align-self: center;
+    justify-self: center;
+    text-align: center;
+}
