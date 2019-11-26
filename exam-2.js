@@ -103,7 +103,7 @@ for (rat in [...ratFlds]){
 
 
 // Sample review a la Johnny
-let review1 = new Review("Captain Nugget, of the Town Guard", "re: Your Beefy Nuggs", "5", "Listen, I have had many beef nuggets in my time. I have traveled the world searching for the perfect beefy snack encased in a delicious wrapper of crustiness. And I have never had a more disgusting nugget than I have ever had at Jahn's Nuggets o' Beef. This is not a review, this is a warning. Never show your face in my town ever again, y'hear?");
+// let review1 = new Review("Captain Nugget, of the Town Guard", "re: Your Beefy Nuggs", "5", "Listen, I have had many beef nuggets in my time. I have traveled the world searching for the perfect beefy snack encased in a delicious wrapper of crustiness. And I have never had a more disgusting nugget than I have ever had at Jahn's Nuggets o' Beef. This is not a review, this is a warning. Never show your face in my town ever again, y'hear?");
 review1.addReview();
 
 //  YOUR CODE ENDS HERE
